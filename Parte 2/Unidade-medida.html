@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /*Em condições normais, 1em = 16px, mas ele se base no elemento pais, logo, se você definir o global como 62.5%
+        1em passará a representar 10px, logo, 1.6em = 16px, mas os textos dentro desse elemento terão um novo normal com base no pai e assim por diante*/
+        html{
+            font-size: 62.5%
+        }
+        h1{
+            font-size: 2.4em;
+        }
+        p{
+            font-size: 1.8em;
+        }
+
+        /*REM = root, ignora o valor pai e passa a responder ao root 1rem = 10px mesmo que o elemento pai seja diferente (o elemento P)*/
+        b{
+            color: red;
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Unidade de medidas</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing <b>elit<b>. Sed pariatur totam repellendus tempora quo consequatur excepturi autem corporis. Aliquid illum sunt laborum necessitatibus quas vero qui omnis voluptatem sint. Architecto!</p>
+    
+</body>
+</html>

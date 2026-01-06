@@ -1,0 +1,159 @@
+:root{
+    --color-Top-Header: #162028;
+    --color-text-menu: #425564;
+    --color-text: #555;
+    --color-bg-imagem-detalhe: #003d52;
+    --color-fundo-footer: #0b171f;
+    --color-text-footer: #6f8597;
+    --colo-logo: #e2e2e2;
+    --colo-logo-invisivel: #e2e2e200;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    background-color: var(--color-Top-Header);
+    padding: 1.6em;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Italiana", sans-serif;
+    padding: 0 10%;
+}
+
+.header__logo{
+    font-size: 3.8em;
+    text-transform: capitalize;
+    margin-left: 1em;
+    letter-spacing: -0.008em;
+    color: var(--colo-logo);
+}
+
+.header__nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1.6em;
+    font-size: 2.4em;
+    font-family: "Roboto", sans-serif;
+}
+
+.header__nav a{
+    color: var(--color-text-menu);
+    text-decoration: none;
+    border-bottom: 2px solid var(--colo-logo-invisivel);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    transition: border-bottom 1s ease, height 1s ease .3s;
+}
+
+.header__nav a:hover{
+    transition: border-bottom 1s ease, height 1s ease .3s;
+    border-bottom: 2px solid var(--colo-logo);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  font-size: 1.5em;
+  line-height: 1.6em;
+}
+
+.titulos {
+  font-family: "Italiana", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3.2em;
+  margin: 3em 0 1em 0;
+}
+
+h3{
+font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  text-transform: uppercase;
+}
+
+.main-apresentacao__imagem{
+    width: 100%;
+}
+
+.main-apresentacao{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content-cards{
+    display: flex;
+    gap: 1em;
+    width: 60%;
+    text-align: center;
+    margin: 7em auto 7em;
+    
+}
+
+.main-apresentacao-card{
+    flex: 1;
+}
+.main-apresentacao-card img{
+    width: 90%;
+}
+
+.main-apresentacao-card p{
+    margin: -0.8em;
+}
+
+.main-text-with-bg{
+    background-image: url(../imagens/bg_detalhe.png);
+    background-color: var(--color-bg-imagem-detalhe);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: right bottom;
+    width: 100%;
+    height: 80dvh;
+}
+
+.main-text-with-bg-content{
+    margin: 0 20% 0 20%;
+    color: var(--colo-logo);
+    padding: 1px;
+}
+
+.main-text-with-bg-content h2{
+    font-size: 4em;
+    text-transform: uppercase;
+    margin-top: 4em;
+}
+
+.main-text-with-bg-content p{
+    width: 60%;
+    font-weight: 400;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--color-fundo-footer);
+    height: 8em;
+    margin: 0;
+    
+}
+footer p{
+    letter-spacing: 0.6em;
+    color: var(--colo-logo);
+    margin-top: 0;
+    padding: 1.88em;
+}
