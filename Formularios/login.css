@@ -53,11 +53,26 @@ legend{
     font-size: 1.1em;
     margin-bottom: 1.5em;
 }
-
+/* 
 .btn{
     width: fit-content;
     margin-left: auto;
     background-color: rgb(69, 69, 246);
     color: white;
     cursor: pointer;
+} */
+
+.actions{
+    display: flex;
+    gap: 1em;
+}
+
+.btn2{
+    background-color: rgb(69, 69, 246);
+    color: white;
+    cursor: pointer;
+}
+
+.btn--apagar{
+    background-color: rgba(255, 0, 0, 0.444);
 }
