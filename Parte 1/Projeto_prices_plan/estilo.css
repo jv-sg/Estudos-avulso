@@ -1,0 +1,170 @@
+:root{
+    --color--cta: #cbe300
+}
+
+body{
+    background-color: #0c1014;
+    color: white;
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-title{
+    text-transform: uppercase;
+    font-size: 62px;
+    text-align: center;
+    margin: 46px 0;
+}
+
+.header{
+    display: flex;
+    background-color: #05080a;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-left: 16px;
+    letter-spacing: 2px;
+}
+
+.header__nav ul{
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    gap: 16px;
+}
+
+.header__nav a{
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.header__nav a:hover{
+    text-decoration: underline;
+}
+
+a.header__nav--active{
+    background-color: var(--color--cta);
+    color: #0c1014;
+    pointer-events: none;
+}
+
+.pricing{
+    display: flex;
+    gap: 30px;
+}
+
+.pricing-plan{
+    flex: 1;
+    background-color: #1f262c;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px -6px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-plan__title{
+    text-transform: uppercase;
+    border-bottom:2px solid var(--color--cta) ;
+    margin-top: 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.pricing-plan p{
+    margin-top: 0;
+}
+
+.pricing-plan__price{
+    font-size: 34px;
+}
+
+.pricing-plan__features{
+    margin: 0 0 35px 0;
+    color: #b5b5b5;
+    padding-left: 16px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.pricing-plan__features li::marker{
+    color: var(--color--cta);
+}
+
+.pricing-plan__cta{
+    text-decoration: none;
+    color: #0c1014;
+    background-color: var(--color--cta);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 10px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.pricing-plan__cta:hover{
+    outline: 2px solid #b5b5b5;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.login-modal{
+    flex: 1;
+    background-color: #1f262c;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px -6px black;
+    width: 300px;
+    box-shadow: 0 5px 15px -6px black;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+input{
+    height: 34px;
+    border-radius: 5px;
+    border: none; /* Remove todas as bordas */
+    border-bottom: 2px solid var(--color--cta);/* Adiciona apenas a borda inferior */
+    outline: none; /* Remove o contorno padrão ao focar */
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    width: 96%;
+    padding: 2px;
+    margin: 0;
+    background-color: #0c1014;
+    color: white;
+}
+
+#login-modal_cta, #login-modal_novo-login{
+    margin-top: 50px;
+    padding: 16px 10px;
+}
+
+.login-modal_esqueci-senha{
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    margin-top: 15px;
+    padding: 0 12px ;
+}
