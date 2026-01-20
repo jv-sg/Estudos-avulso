@@ -56,12 +56,11 @@ body{
     border-bottom: 2px solid var(--cor-principal);
     margin-bottom: .8rem;
     outline: none;
-    transition: padding-left .1s
-}
-
-.form__input:focus{
-    outline: 2px solid var(--cor-principal);
-    padding-left: .3rem;
+    transition: padding-left .1s;
+        &:focus{
+            outline: 2px solid var(--cor-principal);
+            padding-left: .3rem;
+        }
 }
 
 .btn{
@@ -97,9 +96,8 @@ body{
     flex-grow: 1;
     text-align: right;
     color: rgb(74, 74, 74);
-}
-
-.form__action__aside a{
-    text-decoration: none;
-    color: inherit;
+        a{
+        text-decoration: none;
+        color: inherit;
+        }
 }
