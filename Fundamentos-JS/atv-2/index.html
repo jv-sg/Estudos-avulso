@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+    <script src='func.js'></script>
+</head>
+
+<body>
+    <section>
+        <h1>Super calculadora de IMC</h1>
+        <label for="peso">Seu peso em KG</label>
+        <input type="number" name="num" id="peso" placeholder="60.0">
+
+        <label for="altura">Sua altura em Metros</label>
+        <input type="number" name="num" id="altura" placeholder="1.70">
+
+        <button onclick="calcImc()">Calcular</button>
+
+        <p>Resultado: <span id="resultado"></span></p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to top left, transparent 50%, rgb(239, 98, 98) 60%, rgb(73, 73, 243)), url(imagens/tile.png);
+    background-attachment: fixed, scroll;
+    background-blend-mode: color-burn;
+}
+
+.cores{
+    width: 80%;
+    border: 8px dashed color-mix(in srgb, red 50%, blue 20%);
+    margin: 20px auto;
+    padding: 20px;
+    p{
+        margin: 0;
+    }
+}
+
+section{
+    counter-reset: contador;
+}
+
+.cores{
+    counter-increment: contador;
+}
+
+.cores::before{
+    content: "[ "counter(contador)" ]";
+    display: inline-block;
+    font-weight: bold;
+}
+
+.cores:nth-of-type(3){
+    background-color: hsl(50deg, 100%, 80%);
+    box-shadow: 10px 10px 26px 0px hsl(100deg, 100%, 50%) inset;
+        &:hover{
+            background-color: hsl(50deg, 100%, 40%);
+        }
+}
+
+.cores:nth-of-type(4){
+    background-image: linear-gradient(70deg, blue , transparent),
+    linear-gradient(to top, red, transparent);
+}
+
+.cores:nth-of-type(5){
+    background-image: radial-gradient(blue, red, green);
+}
+
+.cores:nth-of-type(6){
+    background-image: radial-gradient(circle, blue, red, green);
+}
+
+.cores:nth-of-type(7){
+    background-image: radial-gradient(circle at 0% 90%, blue, rgb(239, 105, 105) 30%);
+}
