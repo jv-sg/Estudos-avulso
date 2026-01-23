@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 65.2%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    padding: 1px;
+    background: linear-gradient(90deg, hsla(223, 9%, 39%, 1) 0%, hsla(215, 96%, 9%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5B606D", endColorstr="#01132D", GradientType=1 );
+}
+
+section, header{
+    margin: 5em auto;
+    padding: 2em;
+    background: linear-gradient(90deg, hsla(223, 9%, 39%, 1) 0%, hsla(215, 96%, 9%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5B606D", endColorstr="#01132D", GradientType=1 );
+    width: 60em;
+    box-shadow: 0px 5px 21px 4px rgba(255, 255, 255, 0.411);
+    align-content: center;
+    text-align: center;
+}
+
+h1{
+    font-size: 3.5em;
+    color: white;
+}
+
+input{
+    margin: .5em auto;
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.801);
+    height: 2em;
+    width: 10em;
+    font-size: 1.6em;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+select{
+    margin: .5em auto;
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(69, 150, 255, 0.925);
+    height: 2em;
+    width: 8em;
+    font-size: 1.6em;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+button{
+    margin: 1.5em auto;
+    display: block;
+    background-color: rgb(35, 44, 77);
+    color: rgb(255, 255, 255);
+    height: 2em;
+    width: 8em;
+    font-size: 1.6em;
+}
+
+ol{
+    margin: 0 auto;
+    width:80%;
+}
+
+p, li{
+    text-align: justify;
+    font-size: 2em;
+    color: white;
+}

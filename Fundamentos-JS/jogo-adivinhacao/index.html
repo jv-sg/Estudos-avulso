@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Jogo de adivinhação</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+    <script src='logica.js'></script>
+</head>
+
+<body>
+    <header>
+        <h1>Adinhe advinhe</h1>
+    </header>
+
+    <section>
+        <article>
+            <p>as regras são simples:</p>
+            <ol>
+                <li>Esolha um número de 0 a 100</li>
+                <li>O jogo dirá se você acertou ou se o número foi maior ou menor</li>
+                <li>esolha outro número com base na dica que o jogo te deu</li>
+                <li>tente fazer no menor número de tentativas possivel</li>
+            </ol>
+        </article>
+
+
+        <label for="numero">Qual número você acha que é?</label>
+        <input type="number" name="numero" id="numero">
+        <button onclick="acertei()">Adivinhei?</button>
+        <p id="resposta">??</p>
+        <p id="pontuacao">Sua pontuação: 10</p>
+
+    </section>
+
+</body>
+
+</html>

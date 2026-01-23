@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='controle-de-gastos.css'>
+    <script src='controle-de-gastos.js'></script>
+</head>
+
+<body>
+    <main>
+        <h1>Controle de gastos</h1>
+        <form>
+            <input id="valor" type="number" placeholder="Digite o valor gasto">
+            <select id="categoria">
+                <option>Alimentação</option>
+                <option>Transporte</option>
+                <option>Lazer</option>
+                <option>Outros</option>
+            </select>
+            <button type="button" onclick="adicionarGasto()">Adicionar</button>
+        </form>
+        <p id="Alimentação">Alimentação: R$ 0,00</p>
+        <p id="Transporte">Transporte: R$ 0,00</p>
+        <p id="Lazer">Lazer: R$ 0,00</p>
+        <p id="Outros">Outros: R$ 0,00</p>
+        <p id="Total">Total: R$ 0,00</p>
+    </main>
+
+</body>
+
+</html>
