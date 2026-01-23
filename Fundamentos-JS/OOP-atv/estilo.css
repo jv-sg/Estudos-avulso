@@ -1,0 +1,46 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(54, 54, 54);
+    display: flex;
+}
+
+section{
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 21px 4px rgba(0, 0, 0, 0.322);
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+input, button p{
+    font-size: 1rem;
+}
+
+input{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+}
+
+button{
+    margin-top: 1rem;
+    height: 40px;
+    border-radius: 5px;
+}
