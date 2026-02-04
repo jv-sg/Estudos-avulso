@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin: .5em 0 1em 0;
+}
+
+main{
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 5px 21px 4px rgba(0, 0, 0, 0.185);
+    border-radius: 2em;
+    padding: 2em;
+    
+}
+
+div > *{
+    display: block;
+    margin: 0 auto;
+}
+
+input{
+    margin-bottom: 2em;
+    height: 2em;
+    width: 80%;
+}
+
+button{
+    padding: 1em;
+    margin: 0 auto;
+}
