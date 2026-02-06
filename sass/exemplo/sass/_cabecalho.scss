@@ -1,0 +1,13 @@
+@use 'variaveis';
+@use 'mixins';
+
+.cabecalho{
+    background: variaveis.$cor-primaria;
+    color: white;
+    @include mixins.espacamento-padrao;
+    //padding: variaveis.$espacamento-padrao;
+
+    &__titulo{
+        text-align: center;
+    }
+}

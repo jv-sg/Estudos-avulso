@@ -1,0 +1,7 @@
+@mixin arredondamento($redondar : 0.5rem){
+    border-radius: $redondar;
+}
+
+@mixin largura($tamanho : 100%){
+    width: $tamanho;
+}

@@ -1,0 +1,156 @@
+@use 'variaveis';
+@use 'mixins';
+
+.header{
+    grid-area: header;
+    background-color: variaveis.$color-white2;
+    @include mixins.largura();
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        &-nav{
+        margin-right: 10rem;
+    }
+}
+
+.menu__item{
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+
+
+.header__logo{
+    margin-left: 10rem;
+    font-size: 2rem;
+    text-decoration: dotted;
+    text-transform: uppercase;
+    font-style: italic;
+    color: variaveis.$color-red;
+}
+
+
+.main{
+    grid-area: main;
+    @include mixins.largura();
+    margin: 1.25rem auto;
+    padding: 1.25rem;
+    background-color: variaveis.$color-white2;
+    @include mixins.arredondamento();
+
+    &__section{
+        @include mixins.largura(90%);
+        margin: 2rem 0;
+    }
+}
+
+.footer{
+    grid-area: footer;
+    background-color: variaveis.$color-white2;
+    @include mixins.largura();
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__titulo{
+    color: #333;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.content{
+    display: flex;
+    gap: 1rem;
+
+    &__card{
+        background-color: variaveis.$color-red;
+        padding: 1rem;
+        @include mixins.arredondamento(1rem);
+    }
+}
+
+.content__card p{
+    color: variaveis.$color-white;
+}
+
+.footer{
+    padding: 5rem;
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size: .6rem;
+        line-height: 1.5;
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+
+    .header{
+        height: 4rem;
+        &-nav{
+            margin-right: 2rem;
+        }
+    }
+
+    .section__titulo{
+            font-size: 1.25rem;
+            color: #d32f2f;
+        }
+
+    .main{
+            @include mixins.largura(95%);
+            padding: 0.625rem;
+        }
+
+    .content{
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .content__card p{
+        color: variaveis.$color-white;
+    }
+
+    .footer{
+        padding: 5rem;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px){
+.section__titulo{
+        color: variaveis.$color-green;
+        font-size: 1.5rem;
+    }
+
+    .main{
+        @include mixins.largura(90%);
+    }
+
+    .header-nav{
+    margin-right: .5rem;
+    }
+
+    .footer{
+        padding: 2rem;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 901px){
+.section__titulo{
+        color: variaveis.$color-blue;
+        font-size: 1.75rem;
+    }
+
+    .main{
+        @include mixins.largura(70%);
+        max-width: 62.5rem;
+    }
+}
