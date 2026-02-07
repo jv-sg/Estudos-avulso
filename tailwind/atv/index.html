@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Pulseiras | Elegância em cada detalhe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-stone-50 text-stone-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold tracking-widest text-amber-700">AURA</div>
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#home" class="hover:text-amber-600 transition">Início</a></li>
+                <li><a href="#produtos" class="hover:text-amber-600 transition">Produtos</a></li>
+                <li><a href="#depoimentos" class="hover:text-amber-600 transition">Depoimentos</a></li>
+                <li><a href="#contato" class="hover:text-amber-600 transition">Contato</a></li>
+            </ul>
+            <button
+                class="bg-stone-800 text-white px-5 py-2 rounded-full text-sm hover:bg-stone-700 transition">Loja</button>
+        </nav>
+    </header>
+
+    <section id="home" class="relative bg-stone-200 h-[500px] flex items-center">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=1200"
+                alt="Pulseiras de luxo" class="w-full h-full object-cover opacity-60">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-lg">
+                <h1 class="text-5xl font-serif mb-4">Arte que envolve o seu pulso.</h1>
+                <p class="text-lg mb-8 text-stone-700">Descubra nossa coleção exclusiva de pulseiras artesanais feitas
+                    para quem valoriza os detalhes.</p>
+                <a href="#produtos"
+                    class="bg-amber-700 text-white px-8 py-3 rounded-md hover:bg-amber-800 transition shadow-lg">Ver
+                    Coleção</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="py-20 container mx-auto px-6">
+        <h2 class="text-3xl font-serif text-center mb-12">Nossas Peças</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="h-64 bg-stone-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1573408302185-9103fe93a600?auto=format&fit=crop&q=80&w=400"
+                        alt="Pulseira Ouro" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold">Elegance Gold</h3>
+                <p class="text-amber-700 font-semibold mt-2">R$ 129,90</p>
+                <button
+                    class="w-full mt-4 border border-stone-800 py-2 rounded hover:bg-stone-800 hover:text-white transition">Comprar</button>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="h-64 bg-stone-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1611085583191-a3b130a88785?auto=format&fit=crop&q=80&w=400"
+                        alt="Pulseira Couro" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold">Rustic Leather</h3>
+                <p class="text-amber-700 font-semibold mt-2">R$ 89,90</p>
+                <button
+                    class="w-full mt-4 border border-stone-800 py-2 rounded hover:bg-stone-800 hover:text-white transition">Comprar</button>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="h-64 bg-stone-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1535105269368-166ce993478c?auto=format&fit=crop&q=80&w=400"
+                        alt="Pulseira Pedras" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold">Ocean Breeze</h3>
+                <p class="text-amber-700 font-semibold mt-2">R$ 110,00</p>
+                <button
+                    class="w-full mt-4 border border-stone-800 py-2 rounded hover:bg-stone-800 hover:text-white transition">Comprar</button>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="h-64 bg-stone-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=400"
+                        alt="Acessórios" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold">Minimal Silver</h3>
+                <p class="text-amber-700 font-semibold mt-2">R$ 145,00</p>
+                <button
+                    class="w-full mt-4 border border-stone-800 py-2 rounded hover:bg-stone-800 hover:text-white transition">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="bg-stone-800 text-stone-100 py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif mb-12">O que dizem sobre nós</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 italic">
+                <div>
+                    <p class="mb-4 text-lg">"A qualidade é surpreendente, as peças são ainda mais bonitas pessoalmente."
+                    </p>
+                    <span class="font-bold not-italic text-amber-400">— Mariana Costa</span>
+                </div>
+                <div>
+                    <p class="mb-4 text-lg">"O envio foi super rápido e a embalagem é um presente à parte!"</p>
+                    <span class="font-bold not-italic text-amber-400">— Ricardo Lima</span>
+                </div>
+                <div>
+                    <p class="mb-4 text-lg">"Minha pulseira favorita agora! Uso todos os dias e o brilho continua o
+                        mesmo."</p>
+                    <span class="font-bold not-italic text-amber-400">— Juliana Souza</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 container mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-serif mb-6">Fale Conosco</h2>
+                <p class="mb-8 text-stone-600">Tem alguma dúvida sobre nossas peças ou pedidos personalizados?
+                    Adoraríamos ouvir você.</p>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3"><strong>Email:</strong> contato@aurapulseiras.com</p>
+                    <p class="flex items-center gap-3"><strong>WhatsApp:</strong> (11) 99999-9999</p>
+                </div>
+            </div>
+            <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg border border-stone-100">
+                <form action="#" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nome</label>
+                        <input type="text"
+                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">E-mail</label>
+                        <input type="email"
+                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Mensagem</label>
+                        <textarea rows="4"
+                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                    </div>
+                    <button class="w-full bg-stone-800 text-white py-3 rounded-md hover:bg-stone-700 transition">Enviar
+                        Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-100 py-8 border-t border-stone-200 text-center text-sm text-stone-500">
+        <p>&copy; 2026 Aura Pulseiras. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
