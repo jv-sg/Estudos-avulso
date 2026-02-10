@@ -12,16 +12,16 @@
 }
 
 .card-container:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 .imagem {
-    width: 100%; /* Ocupa a largura total do card */
-    max-width: 200px; /* Mas não ultrapassa 200px */
+    width: 100%;
+    max-width: 200px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
-    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+    object-fit: cover;
 }
 
 .titulo {
@@ -35,28 +35,28 @@
     font-size: 0.95rem;
     color: #666;
     margin-bottom: 15px;
-    flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
+    flex-grow: 1;
 }
 
 .preco {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #28a745; /* Uma cor verde para o preço */
+    color: #28a745;
     margin-bottom: 20px;
 }
 
 .qtd {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre os botões e o número */
-    margin-top: auto; /* Empurra os controles de quantidade para o final */
+    gap: 10px;
+    margin-top: auto;
 }
 
 .qtd button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 50%; /* Botões redondos */
+    border-radius: 50%;
     width: 35px;
     height: 35px;
     font-size: 1.2rem;
