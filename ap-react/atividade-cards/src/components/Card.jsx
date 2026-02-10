@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Card.css';
 
+
 function Card({imagem, titulo, descricao, preco}){
     const [quantidade, setQuantidade] = useState(0)
 
