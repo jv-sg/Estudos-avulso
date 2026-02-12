@@ -1,78 +1,41 @@
-import { useContext, useEffect, useState } from "react";
-import Tarefa from "./Tarefa";
-import { useInput } from "../hooks/useInput";
+import { useContext } from "react";
+import { TarefaContext } from "./TarefaContext";
 import { UserContext } from "../contexts/UserContext";
-import './ListaTarefa.css'
-
-const API_URL = 'https://crudcrud.com/api/0e2be0bca5d64b11860b8284ac941189/tarefas';
+import { useInput } from "../hooks/useInput";
+import TarefaItem from "./TarefaItem";
 
 function ListaTarefas() {
-  const [tarefas, setTarefas] = useState ([]);
-  const tarefa = useInput();
-  const {usuario} = useContext(UserContext);
-  
-  //Buscar os dados na API quando o componente for montado
-  useEffect(() => {
-    fetch(API_URL)
-    .then(res => res.json())
-    .then(dados => setTarefas(dados))
-    .catch(error => console.error("Erro ao buscar a tarefa: ", error))
-  },[])
+  const { tarefas, adicionarTarefa, setFiltro } = useContext(TarefaContext);
+  const { usuario } = useContext(UserContext);
+  const inputTarefa = useInput();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Valor da tarefa: " + tarefa.valor)
-    if(tarefa.valor === '') return;
-
-    //Envio da tarefa para a API
-    const nova = { usuario: usuario.nome, texto: tarefa.valor}
-    fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json'},
-      body: JSON.stringify(nova)
-    })
-    .then(res => res.json())
-    .then(tarefaCriada => {
-      setTarefas([...tarefas, tarefaCriada]);
-      tarefa.limpar;
-    })
-    .catch(error => console.error("Erro ao buscar a tarefa: ", error))
-  }
-
-  const handleDeletar = (id) => {
-  fetch(`${API_URL}/${id}`, { method: 'DELETE' })
-    .then(res => {
-      if (res.ok) {
-        // Filtra a lista removendo a tarefa que tem o ID deletado
-        setTarefas(prev => prev.filter(t => t._id !== id));
-      }
-    })
-    .catch(error => console.error("Erro ao deletar:", error));
-};
+    if (!inputTarefa.valor.trim()) return;
+    adicionarTarefa(inputTarefa.valor, usuario.nome);
+    inputTarefa.limpar(); // Agora com parênteses!
+  };
 
   return (
-    <>
+    <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="O que você fará hoje?"
-        value={tarefa.valor}
-        onChange={tarefa.onChange}/>
-        <button type="submit">Adicionar tarefa</button>
+        <input {...inputTarefa} placeholder="Nova tarefa..." />
+        <button type="submit">Adicionar</button>
       </form>
 
+      <div className="filtros">
+        <button onClick={() => setFiltro("todas")}>Todas</button>
+        <button onClick={() => setFiltro("pendentes")}>Pendentes</button>
+        <button onClick={() => setFiltro("concluidas")}>Concluídas</button>
+      </div>
+
       <ul>
-      {tarefas
-        .filter(tarefa => tarefa.usuario === usuario.nome)
-        .map(tarefa => (
-            <Tarefa key={tarefa._id}
-            id={tarefa._id}
-            texto={tarefa.texto}
-            onDelete={handleDeletar}
-            />
-          ))
-        }
+        {tarefas.map(t => (
+          <TarefaItem key={t._id} tarefa={t} />
+        ))}
       </ul>
-    </>
-  )
+    </div>
+  );
 }
 
-export default ListaTarefas
+export default ListaTarefas;
