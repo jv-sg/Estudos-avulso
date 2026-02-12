@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import './Tarefa.css';
 
-function Tarefa({texto}){
+function Tarefa({ id, texto, onDelete }){
     const [concluida, setConcluida] = useState(false)
     const alternarConcluida = () => {
         setConcluida(!concluida)
@@ -10,8 +10,8 @@ function Tarefa({texto}){
         <li>
         <input type="checkbox" onChange={alternarConcluida}/>
         <span className={ concluida ? 'concluida' : ''}> {texto}</span>
-        <button>Remover</button>
+        <button onClick={() => onDelete(id)}>Remover</button>
         </li>
     )
 }
-export default Tarefa
+export default memo(Tarefa)
