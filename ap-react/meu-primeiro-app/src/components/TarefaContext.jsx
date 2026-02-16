@@ -2,7 +2,7 @@ import { createContext, useState, useEffect, useMemo } from "react";
 
 export const TarefaContext = createContext();
 
-const API_URL = 'https://crudcrud.com/api/0e2be0bca5d64b11860b8284ac941189/tarefas';
+const API_URL = 'https://crudcrud.com/api/dc39a18d20cb4866b053b69d9c47944e/tarefas';
 
 export function TarefaProvider({ children }) {
   const [tarefas, setTarefas] = useState([]);

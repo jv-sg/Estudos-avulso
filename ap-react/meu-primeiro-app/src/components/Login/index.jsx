@@ -1,7 +1,8 @@
 import { useContext } from "react"
-import { useInput } from "../hooks/useInput"
-import { UserContext } from "../contexts/UserContext"
+import { useInput } from "../../hooks/useInput"
+import { UserContext } from "../../contexts/UserContext"
 import './Login.css'
+import { Form, Form__login, Login__btn } from './styles.jsx'
 
 function Login(){
     const NomeDoUsuario = useInput()
@@ -13,13 +14,13 @@ function Login(){
     }
 
 return(
-    <form className="form" onSubmit={handleLogin}>
-        <input className="form__login" type="text"
+    <Form onSubmit={handleLogin}>
+        <Form__login type="text"
         placeholder="Digitie seu nome"
         value={NomeDoUsuario.valor}
         onChange={NomeDoUsuario.onChange} />
-        <button type="submit" className="login__btn">Entrar</button>
-    </form>
+        <Login__btn type="submit">Entrar</Login__btn>
+    </Form>
 )
 }
 export default Login

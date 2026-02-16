@@ -1,0 +1,24 @@
+.alerta{
+    /* background-color: red;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 22px;
+    border-radius: 4px; */
+}
+.alerta:hover{
+    /* background-color: rgb(146, 60, 60); */
+}
+
+.li{
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom:1px solid #eee ; */
+}
+
+.concluida {
+    /* text-decoration: line-through;
+    color: #999; */
+}
