@@ -3,6 +3,8 @@ import { TarefaContext } from "./TarefaContext";
 import { UserContext } from "../contexts/UserContext";
 import { useInput } from "../hooks/useInput";
 import TarefaItem from "./TarefaItem";
+import styles from './ListaTarefa.module.css'
+
 
 function ListaTarefas() {
   const { tarefas, adicionarTarefa, setFiltro } = useContext(TarefaContext);
@@ -18,18 +20,18 @@ function ListaTarefas() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input {...inputTarefa} placeholder="Nova tarefa..." />
-        <button type="submit">Adicionar</button>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <input className={styles.input} {...inputTarefa} placeholder="Nova tarefa..." />
+        <button className={styles.button} type="submit">Adicionar</button>
       </form>
 
       <div className="filtros">
-        <button onClick={() => setFiltro("todas")}>Todas</button>
-        <button onClick={() => setFiltro("pendentes")}>Pendentes</button>
-        <button onClick={() => setFiltro("concluidas")}>Concluídas</button>
+        <button className={styles.buttonSec} onClick={() => setFiltro("todas")}>Todas</button>
+        <button className={styles.buttonSec} onClick={() => setFiltro("pendentes")}>Pendentes</button>
+        <button className={styles.buttonSec} onClick={() => setFiltro("concluidas")}>Concluídas</button>
       </div>
 
-      <ul>
+      <ul className={styles.lista}>
         {tarefas.map(t => (
           <TarefaItem key={t._id} tarefa={t} />
         ))}
