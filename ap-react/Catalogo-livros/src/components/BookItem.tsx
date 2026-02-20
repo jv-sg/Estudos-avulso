@@ -1,3 +1,4 @@
+import React from 'react'
 import type { BookItemProps } from '../tipos/Books.ts';
 
 const BookItem: React.FC<BookItemProps> = ({ book, onDelete, onToggleStatus }) => (
