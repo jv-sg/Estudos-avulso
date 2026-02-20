@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import type { Book } from '../tipos/Books.ts';
 import BookForm from './BookForm.tsx';
@@ -29,11 +29,11 @@ const BookList: React.FC = () => {
       ...book, 
       status: book.status === "Lido" ? "Não lido" : "Lido" 
     };
-    // console.log("teste 2")
-    const { _id, ...dataToSend } = updatedBook; //_id fuca vermelho mas se remove ele para de funcionar???
+    const { _id, ...dataToSend } = updatedBook;
     await axios.put(`${API_URL}/${book._id}`, dataToSend);
-    fetchBooks(); // teste de verificar sinclonia
   };
+
+  useEffect(() => { fetchBooks(); }, []); //teste de implementação do useEffect
 
   return (
     <div>
