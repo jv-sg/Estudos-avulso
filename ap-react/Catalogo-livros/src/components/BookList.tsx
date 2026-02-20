@@ -29,10 +29,10 @@ const BookList: React.FC = () => {
       ...book, 
       status: book.status === "Lido" ? "Não lido" : "Lido" 
     };
-    // O CrudCrud não aceita o _id no corpo do PUT, então removemos
-    const { _id, ...dataToSend } = updatedBook;
+    // console.log("teste 2")
+    const { _id, ...dataToSend } = updatedBook; //_id fuca vermelho mas se remove ele para de funcionar???
     await axios.put(`${API_URL}/${book._id}`, dataToSend);
-    fetchBooks(); // Recarrega para garantir sincronia
+    fetchBooks(); // teste de verificar sinclonia
   };
 
   return (
