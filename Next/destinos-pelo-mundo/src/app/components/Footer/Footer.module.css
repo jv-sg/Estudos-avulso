@@ -1,0 +1,17 @@
+.footer{
+    background-color: rgb(126, 216, 223);
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #ffffff;
+    font-weight: bolder;
+    height: 5rem;
+    width: 100%;
+    float: right;
+    position: sticky;
+    bottom: 0;
+}
+
+.footer__text{
+    margin: 0;
+    font-size: 0.87rem;
+}

@@ -1,0 +1,26 @@
+.card {
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.card:hover{
+    transform: scale(1.02);
+}
+
+.card__poster{
+    margin-top: 1rem;
+}
+
+.card__tile{
+    font-size: 1.1rem;
+    color: rgb(92, 92, 92);
+    margin: 0.5rem 0;
+}
+
+.card__poster{
+    width: 100%;
+    display: block;
+}
