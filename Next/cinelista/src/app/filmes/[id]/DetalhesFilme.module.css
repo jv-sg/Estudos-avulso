@@ -1,0 +1,26 @@
+.detalhe{
+    padding: 40px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.detalhe__container{
+    display: flex;
+    gap: 32px;
+    background-color: #1f1f1f;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.detalhe__image{
+    width: 300px;
+    height: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detalhe__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
