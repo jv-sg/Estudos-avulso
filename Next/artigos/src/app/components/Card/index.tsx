@@ -7,10 +7,10 @@ type Props ={
 }
 
 const Card = ({ artigo } : Props) => {
-    const {id, titulo, subtitulo, autor, imagem, data} = artigo
+    const {id, slug, titulo, subtitulo, autor, imagem, data} = artigo
     return(
         <div key={id} className={style.card}>
-            <Link href={`/artigos/${id}`}>
+            <Link href={`/artigos/${slug}`}>
                 <img className={style.card__poster} src={imagem} alt={`artigo ${titulo}`} />
                 <div className={style.card__content}>
                     <span className={style.card__data}>{ data }</span>

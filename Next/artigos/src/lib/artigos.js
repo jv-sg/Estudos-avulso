@@ -1,6 +1,7 @@
 export const materias = [
     {
         id: 1,
+        slug:"Compre-o-novo-Galaxy-S26-Ultra-no-Magalu-e-ganhe-mais-de-100-mil-pontos-Livelo",
         data: "26/02/2026",
         titulo: "Compre o novo Galaxy S26 Ultra no Magalu e ganhe mais de 100 mil pontos Livelo",
         subtitulo: "Alerta de oportunidade para quem está pensando em trocar de celular",
@@ -12,6 +13,7 @@ export const materias = [
 
     {
         id: 2,
+        slug: "Comissao-do-Senado-aprova-prova-obrigatoria-para-novos-medicos",
         data: "26/02/2026",
         titulo: "Comissão do Senado aprova prova obrigatória para novos médicos",
         subtitulo: "Texto segue para análise na Câmara dos Deputados.",
@@ -22,6 +24,7 @@ export const materias = [
     },
     {
         id: 3,
+        slug: "Aparelho-automatizado-do-Ciscopar-agiliza-testes-de-tuberculose",
         data: "27/02/2026",
         titulo: "Aparelho automatizado do Ciscopar agiliza testes de tuberculose",
         subtitulo: "",
@@ -33,8 +36,9 @@ export const materias = [
 
     {
         id: 5,
+        slug: "",
         data: "27/02/2026",
-        titulo: "Astrônomos descobrem nova 'superterra' a 91 anos-luz da Terra, entenda",
+        titulo: "Astronomos-descobrem-nova-superterra-a-91-anos-luz-da-Terra",
         subtitulo: "Planeta HD 176986 d tem massa até sete vezes maior e orbita estrela anã laranja do tipo K",
         materia: "Uma equipe internacional de astrônomos identificou um novo planeta do tipo superterra orbitando a estrela HD 176986, localizada a cerca de 91 anos‑luz da Terra — um ano-luz equivale a cerca de 9,46 trilhões de quilômetros. A descoberta foi liderada pelo Instituto de Astrofísica das Ilhas Canárias (IAC) e publicada na revista Astronomy & Astrophysics, ampliando para três o número de planetas conhecidos no sistema. A estrela, uma anã laranja do tipo K ligeiramente menor que o Sol, já era conhecida por abrigar dois planetas desde 2018. Desde então, a equipe acompanhou o sistema até que o sinal do terceiro planeta enfim se destacasse das medições.",
         autor: "O Globo",
@@ -43,6 +47,7 @@ export const materias = [
     },
     {
         id: 6,
+        slug: "Artemis-2-Nasa-recolhe-foguete-para-reparos-e-atrasa-missao-tripulada-a-Lua",
         data: "21/02/2026",
         titulo: "Artemis 2: Nasa recolhe foguete para reparos e atrasa missão tripulada à Lua",
         subtitulo: "Foguete SLS, da missão Artemis 2, vai ser levado de volta ao hangar para manutenção",
@@ -53,6 +58,7 @@ export const materias = [
     },
     {
         id: 7,
+        slug: "Resident-Evil-Requiem-TALEVINHO-NO-PC!",
         data: "27/02/2026",
         titulo: "Resident Evil Requiem TÁ LEVINHO NO PC!",
         subtitulo: "Descubra aqui se o novo Resident Evil vai rodar no seu PC!",
@@ -63,6 +69,7 @@ export const materias = [
     },
     {
         id: 8,
+        slug: "Como-a-taxacao-de-bets-virou-entrave-no-PL-Antifaccao",
         data: "25/02/2026",
         titulo: "Como a taxação de bets virou entrave no PL Antifacção",
         subtitulo: "Câmara dos Deputados aprova projeto de lei sem tributação de apostas online",
@@ -73,6 +80,7 @@ export const materias = [
     },
     {
         id: 9,
+        slug: "Como-a-presenca-LGBTI-mudou-nas-telenovelas",
         data: "25/02/2026",
         titulo: "Como a presença LGBTI+ mudou nas telenovelas",
         subtitulo: "Casal ‘Loquinha’, de ‘Três graças’, tornou-se fenômeno nas redes sociais.",
@@ -83,6 +91,7 @@ export const materias = [
     },
     {
         id: 10,
+        slug: "A-forca-do-lobby-para-frear-os-impostos-de-refrigerantes",
         data: "22/02/2026",
         titulo: "A força do lobby para frear os impostos de refrigerantes",
         subtitulo: "Levantamento da Agência Pública mostra que a maior parte dessas bebidas, que deveriam ter o consumo desestimulado de acordo com a legislação, se encaminha para pagar menos tributos que a água mineral",
@@ -93,8 +102,9 @@ export const materias = [
     },
     {
         id: 11,
+        slug: "",
         data: "12/07/2023",
-        titulo: "Como tirar mancha de café da roupa",
+        titulo: "Como-tirar-mancha-de-cafe-da-roupa",
         subtitulo: "Como tirar mancha de café da roupa? A gente te ensina a tirar mancha da roupa sem danificar sua peça! Confira dicas para o dia a dia no Blog Compra Certa!",
         materia: "O café faz parte da rotina do povo brasileiro, isso não podemos negar. A qualquer hora do dia um cafezinho é sempre bem-vindo, seja para começar o dia, após o almoço, no lanche da tarde ou quando estamos precisando de uma dose de ânimo para enfrentar o dia. Além disso, também utilizamos muito o café para preparar receitas deliciosas como a de cappucino e tiramisù. Uma bebida muito versátil e cheia de sabor, não é mesmo? Com toda essa presença do café no dia a dia, é comum que pequenos acidentes ocorram e caia um pouco de café na roupa. E agora, como tirar mancha de café da roupa sem danificar o tecido? Nós vamos te ajudar a resolver essa questão sem danificar suas roupas e toalhas de mesa! Na matéria você vai encontrar:– Dicas de como tirar mancha de café– Como tirar mancha de café seca– Como tirar mancha de café em roupa branca",
         autor: "Compra certa",
@@ -103,6 +113,7 @@ export const materias = [
     },
     {
         id: 12,
+        slug: "Lista-de-compras-de-supermercado-dicas-de-ouro-para-fazer-a-sua",
         data: "01/09/2022",
         titulo: "Lista de compras de supermercado: dicas de ouro para fazer a sua",
         subtitulo: "Preparar uma lista de compras de supermercado é algo que poderia ser feito com mais frequência.",
@@ -113,6 +124,7 @@ export const materias = [
     },
     {
         id: 13,
+        slug: "Como-limpar-maquina-de-lavar-louca",
         data: "27/02/2026",
         titulo: "Como limpar máquina de lavar louça?",
         subtitulo: "Dicas de como limpar máquina de lavar louça: sua máquina com ótimo funcionamento, sem odores e uma rotina muito mais prática.",
@@ -123,6 +135,7 @@ export const materias = [
     },
     {
         id: 14,
+        slug: "Simbolos-de-lavagem-de-roupas-voce-sabe-interpretar",
         data: "27/02/2026",
         titulo: "Símbolos de lavagem de roupas: você sabe interpretar?",
         subtitulo: "Sabe lavar suas roupas sem danificá-las? O Blog Compra Certa te ensina a ler os símbolos de lavagem de roupas pra não cometer erros! Vem conferir essa dica!",
@@ -133,6 +146,7 @@ export const materias = [
     },
     {
         id: 15,
+        slug: "Cooktop-para-espacos-pequenos-como-aproveitar-cada-centimetro-da-cozinha",
         data: "27/02/2026",
         titulo: "Cooktop para espaços pequenos: como aproveitar cada centímetro da cozinha",
         subtitulo: "Cozinhar é uma arte. Mas só quem mora em uma casa ou apartamento compacto sabe o que é fazer mágica para preparar qualquer prato.",
@@ -143,6 +157,7 @@ export const materias = [
     },
     {
         id: 16,
+        slug: "Fogao-Geladeira-ou-Lava-e-Seca-qual-comprar-na-Black-Friday",
         data: "27/02/2026",
         titulo: "Fogão, Geladeira ou Lava e Seca: qual comprar na Black Friday?",
         subtitulo: "Todo ano é a mesma coisa: chega a Black Friday e a gente começa a imaginar como seria trocar aquele eletrodoméstico que vive pedindo paciência.",
@@ -153,6 +168,7 @@ export const materias = [
     },
     {
         id: 17,
+        slug: "Outlet-Compra-Certa-entenda-as-diferencas-e-como-economizar",
         data: "27/02/2026",
         titulo: "Outlet Compra Certa: entenda as diferenças e como economizar",
         subtitulo: "Renovar a casa ou montar o primeiro lar é uma jornada cheia de planos.",
@@ -163,6 +179,7 @@ export const materias = [
     },
     {
         id: 18,
+        slug: "Maquina-de-lavar-qual-e-a-capacidade-ideal-para-sua-casa",
         data: "27/02/2026",
         titulo: "Máquina de lavar: qual é a capacidade ideal para sua casa",
         subtitulo: "Você já parou para pensar que escolher a máquina de lavar ideal é quase como encontrar um parceiro de rotina?",
@@ -173,6 +190,7 @@ export const materias = [
     },
     {
         id: 19,
+        slug: "Freezer-Vertical-ou-Horizontal-qual-combina-com-o-seu-dia-a-dia",
         data: "27/02/2026",
         titulo: "Freezer Vertical ou Horizontal: qual combina com o seu dia a dia?",
         subtitulo: "Imagina a cena: você está planejando uma festa, o fim de semana daquele churrasco com os amigos ou quer simplesmente estocar as marmitas da semana em paz e, do nada, percebe que o freezer da geladeira já não dá conta do recado.",
@@ -183,6 +201,7 @@ export const materias = [
     },
     {
         id: 20,
+        slug: "Seminovos-guia-para-comprar-eletrodomesticos-com-100-de-seguranca",
         data: "27/02/2026",
         titulo: "Seminovos: guia para comprar eletrodomésticos com 100% de segurança",
         subtitulo: "Quando chega o momento de montar a casa, a expectativa cresce junto com a lista de eletrodomésticos.",
