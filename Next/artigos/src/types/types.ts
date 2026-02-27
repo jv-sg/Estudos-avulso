@@ -7,4 +7,5 @@ export interface Artigo {
     autor: string;
     categoria: string;
     imagem: string;
+    slug: string
 }

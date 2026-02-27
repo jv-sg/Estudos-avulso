@@ -1,17 +1,16 @@
 import { materias } from "@/lib/artigos"
 import styles from "./Artigos.module.css"
 import { notFound } from "next/navigation"
-import { title } from "process"
 
 type Props = {
-    params : Promise<{
-        id : number
+    params: Promise<{
+        slug: string
     }>
 }
 
 export const generateMetadata = async({ params } : Props) =>{
-    const { id } = await params;
-    const detalhes = materias.find(materias => materias.id == id)
+    const { slug } = await params;
+    const detalhes = materias.find(materias => materias.slug == slug)
 
     if(!detalhes) return;
 
@@ -28,9 +27,15 @@ export const generateMetadata = async({ params } : Props) =>{
 
 export const dynamic = 'force-static'
 
+export async function generateStaticParams() {
+    return materias.map((materia) => ({
+        slug: materia.slug,
+    }))
+}
+
 const LerNoticia = async ({params} : Props) =>{
-    const { id } = await params;
-    const detalhes = materias.find(materias => materias.id == id)
+    const { slug } = await params;
+    const detalhes = materias.find(materias => materias.slug == slug)
 
     if(!detalhes) return notFound()
 
