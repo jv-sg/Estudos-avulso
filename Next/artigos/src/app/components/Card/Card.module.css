@@ -1,0 +1,43 @@
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+    transition: transform 0.3s;
+    justify-items: center;
+}
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card__tile{
+    font-size: 1.1rem;
+    color: rgb(44, 44, 44);
+    margin: 0 0 0.5rem 0;
+}
+
+.card__info{
+    padding: 1rem 0;
+}
+
+.card__description{
+    font-size: 1.1rem;
+    color: #585858;
+}
+
+.card__poster{
+    width: 100%;
+    display: block;
+}
+
+.card__data{
+    margin: 10px 0;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+.card__content{
+    width: 80%;
+    margin-top: 1em;
+}
