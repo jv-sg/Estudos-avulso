@@ -1,0 +1,26 @@
+name: Pipeline CI/CD
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v5
+
+      - name: Instalação do node
+        uses: actions/setup-node@v4
+        
+        with:
+          node-version: '20'
+
+      - name: Instalação das dependencias
+        run: npm install
+
+      - name: Rodar build
+        run: npm run biuld
