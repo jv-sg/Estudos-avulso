@@ -1,0 +1,51 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div__content{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.div__img{
+    padding: 2em 0;
+    display: block;
+    margin: 0 auto;
+    width: 50em;
+    height: 100%;
+}
+
+.div__h1{
+    font-size: 2.3em;
+    margin: .5em 0;
+    color: rgb(44, 44, 44);
+}
+
+.div__h2{
+    font-size: 1.6em;
+    margin: .5em 0;
+    color: rgb(80, 80, 80);
+}
+
+.div__autor{
+    font-size: 1em;
+    margin: .5em 0 0;
+    color: rgb(80, 80, 80);
+}
+.div__data{
+    font-size: .9em;
+    color: rgb(80, 80, 80);
+}
+
+.article{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.article__p{
+    font-size: 1.2em;
+    margin: 2em 0;
+    line-height: 1.5em;
+}
