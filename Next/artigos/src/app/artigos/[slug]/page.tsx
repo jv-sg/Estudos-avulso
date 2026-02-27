@@ -26,7 +26,6 @@ export const generateMetadata = async({ params } : Props) =>{
 }
 
 export const dynamic = 'force-static'
-
 export async function generateStaticParams() {
     return materias.map((materia) => ({
         slug: materia.slug,
