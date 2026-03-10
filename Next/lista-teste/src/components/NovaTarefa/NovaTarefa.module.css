@@ -1,0 +1,23 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input{
+    height: 2.5em;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: solid #325ccf 2px;
+    margin-bottom: 1em;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.button{
+    height: 2.5rem;
+    border: none;
+    background-color: #325ccf;
+    color: white;
+    font-size: 1.2rem;
+}
