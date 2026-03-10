@@ -1,11 +1,9 @@
-import style from "./Title.module.css"
+import style from './Title.module.css';
 
 type Props = {
-    title : string
-}
+  title: string;
+};
 
-export const Title = ({title} : Props) =>{
-    return(
-        <h2 className={style.title}>{ title }</h2>
-    );
-}
+export const Title = ({ title }: Props) => {
+  return <h2 className={style.title}>{title}</h2>;
+};
