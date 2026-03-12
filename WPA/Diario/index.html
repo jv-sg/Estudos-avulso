@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <meta name="description" content="Diário de Bordo – Registre suas atividades diárias" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css">
+  <title>Diário de Bordo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="offline-banner">⚓ Você está offline — seus dados estão salvos localmente.</div>
+
+  <header>
+    <div class="header-left">
+      <span class="brand-label">Registro pessoal</span>
+      <h1 class="brand-title">Diário de Bordo</h1>
+      <p class="brand-subtitle">Memória · Reflexão · Continuidade</p>
+    </div>
+    <div class="header-right">
+      <span id="entry-count"></span>
+      <button id="install-btn" aria-label="Instalar aplicativo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 17V3M7 12l5 5 5-5" />
+          <path d="M3 21h18" />
+        </svg>
+        Instalar
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- FORM -->
+    <section aria-label="Nova entrada">
+      <div class="form-card">
+        <div class="form-title">
+          Nova Entrada
+          <span>campos obrigatórios *</span>
+        </div>
+        <form id="entry-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="title">Título *</label>
+              <input type="text" id="title" placeholder="O que aconteceu hoje?" required autocomplete="off" />
+            </div>
+            <div class="form-group">
+              <label for="date">Data *</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="form-group full">
+              <label for="description">Descrição</label>
+              <textarea id="description"
+                placeholder="Descreva com mais detalhes sua atividade, pensamentos ou observações…"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              Registrar Entrada
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section aria-label="Entradas registradas">
+      <div class="section-header">
+        <h2 class="section-title">Registros</h2>
+        <span class="section-meta" id="filtered-count"></span>
+      </div>
+
+      <div id="entries-list" role="list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // ── Storage ccom Json ──────────────────────────────────────────────────────────────
+    const STORAGE_KEY = 'diario_entries';
+
+    function loadEntries() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+      catch { return []; }
+    }
+
+    function saveEntries(entries) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+    }
+
+    let entries = loadEntries();
+    let searchQuery = '';
+
+    // ── Inicio do cadastro ────────────────────────────────────────────────────────────
+    function formatDate(iso) {
+      const [y, m, d] = iso.split('-');
+      return new Date(y, m - 1, d).toLocaleDateString('pt-BR', {
+        weekday: 'short', day: '2-digit', month: 'short', year: 'numeric'
+      });
+    }
+
+    function render() {
+      const list = document.getElementById('entries-list');
+      const countEl = document.getElementById('entry-count');
+      const filteredEl = document.getElementById('filtered-count');
+
+      const q = searchQuery.toLowerCase().trim();
+      const filtered = q
+        ? entries.filter(e =>
+          e.title.toLowerCase().includes(q) ||
+          (e.description || '').toLowerCase().includes(q)
+        )
+        : entries;
+
+      const sorted = [...filtered].sort((a, b) => b.date.localeCompare(a.date));
+
+      countEl.textContent = entries.length === 0 ? ''
+        : entries.length === 1 ? '1 entrada' : `${entries.length} entradas`;
+
+      filteredEl.textContent = q
+        ? `${sorted.length} resultado${sorted.length !== 1 ? 's' : ''}`
+        : entries.length > 0 ? `${entries.length} total` : '';
+
+      if (sorted.length === 0) {
+        list.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">📓</div>
+          <p class="empty-title">${q ? 'Nenhuma entrada encontrada' : 'O diário está em branco'}</p>
+          <p class="empty-sub">${q ? 'Tente outros termos de busca.' : 'Registre sua primeira entrada acima.'}</p>
+        </div>`;
+        return;
+      }
+
+      list.innerHTML = sorted.map(entry => `
+      <div class="entry-card" role="listitem" data-id="${entry.id}">
+        <div class="entry-body">
+          <div class="entry-header">
+            <span class="entry-title">${escHtml(entry.title)}</span>
+            <time class="entry-date" datetime="${entry.date}">${formatDate(entry.date)}</time>
+          </div>
+          ${entry.description
+          ? `<p class="entry-desc">${escHtml(entry.description)}</p>`
+          : ''}
+        </div>
+        <button class="btn-delete" data-id="${entry.id}" aria-label="Remover entrada: ${escHtml(entry.title)}" title="Remover">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/>
+          </svg>
+        </button>
+      </div>
+    `).join('');
+    }
+
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // ── Formulario ──────────────────────────────────────────────────────────────
+    const form = document.getElementById('entry-form');
+    const titleInput = document.getElementById('title');
+    const dateInput = document.getElementById('date');
+    const descInput = document.getElementById('description');
+
+    // Setando a data
+    dateInput.value = new Date().toISOString().split('T')[0];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const title = titleInput.value.trim();
+      const date = dateInput.value;
+      if (!title || !date) {
+        toast('⚠ Preencha o título e a data.', false);
+        return;
+      }
+
+      const entry = {
+        id: Date.now().toString(36) + Math.random().toString(36).slice(2),
+        title,
+        date,
+        description: descInput.value.trim(),
+        createdAt: new Date().toISOString()
+      };
+
+      entries.unshift(entry);
+      saveEntries(entries);
+      render();
+
+      form.reset();
+      dateInput.value = new Date().toISOString().split('T')[0];
+      titleInput.focus();
+      toast('✦ Entrada registrada com sucesso!');
+    });
+
+    // ── Apagar ────────────────────────────────────────────────────────────
+    document.getElementById('entries-list').addEventListener('click', e => {
+      const btn = e.target.closest('.btn-delete');
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const entry = entries.find(en => en.id === id);
+      if (!entry) return;
+      if (!confirm(`Remover a entrada "${entry.title}"?`)) return;
+      entries = entries.filter(en => en.id !== id);
+      saveEntries(entries);
+      render();
+      toast('🗑 Entrada removida.');
+    });
+
+    // ── Aviso ─────────────────────────────────────────────────────────────
+    let toastTimer;
+    function toast(msg, success = true) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.style.background = success ? 'var(--ink)' : '#7a3a30';
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
+    }
+
+    // ── Banner off ────────────────────────────────────────────────────
+    function updateOnlineStatus() {
+      document.getElementById('offline-banner').classList
+        .toggle('visible', !navigator.onLine);
+    }
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    updateOnlineStatus();
+
+    // ── Instalacao ────────────────────────────────────────────────────
+    let deferredPrompt = null;
+    const installBtn = document.getElementById('install-btn');
+
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.classList.add('visible');
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        installBtn.classList.remove('visible');
+        toast('✦ Aplicativo instalado!');
+      }
+      deferredPrompt = null;
+    });
+
+    window.addEventListener('appinstalled', () => {
+      installBtn.classList.remove('visible');
+      deferredPrompt = null;
+    });
+
+    // ── Servico Worker ────────────────────────────────────────────────────
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(reg => console.log('[SW] Registrado:', reg.scope))
+        .catch(err => console.error('[SW] Erro:', err));
+    }
+
+    render();
+  </script>
+</body>
+
+</html>
