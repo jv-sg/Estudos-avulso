@@ -1,0 +1,15 @@
+/**
+ * bootstrap.js - Micro Pedido
+ * Monta o app standalone (modo de desenvolvimento isolado).
+ */
+import React from "react";
+import ReactDOM from "react-dom/client";
+import PedidoApp from "./PedidoApp";
+import "./styles/pedido.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <PedidoApp />
+  </React.StrictMode>
+);
