@@ -1,6 +1,3 @@
-/* global.css - Estilos globais do Container App */
-
-/* ── Variáveis de design ── */
 :root {
   --color-bg: #0f0e0d;
   --color-surface: #1a1816;
@@ -12,19 +9,15 @@
   --color-text-muted: #8a8278;
   --color-success: #5a9e6f;
   --color-error: #c0504d;
-
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
-
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
-
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
   --shadow-glow: 0 0 20px rgba(201, 147, 58, 0.12);
 }
 
-/* ── Reset & base ── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -44,14 +37,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Layout principal ── */
 .app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ── Header ── */
 .app-header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
@@ -127,13 +118,11 @@ body {
   50% { opacity: 0.4; }
 }
 
-/* ── Conteúdo principal ── */
 .main-content {
   flex: 1;
   padding: 2rem;
 }
 
-/* ── Grid dos micros ── */
 .micro-grid {
   max-width: 1400px;
   margin: 0 auto;
@@ -143,7 +132,6 @@ body {
   align-items: start;
 }
 
-/* Seções dos micros */
 .micro-section {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -152,7 +140,6 @@ body {
   box-shadow: var(--shadow-card);
 }
 
-/* ── Loading Spinner ── */
 .loading-wrapper {
   display: flex;
   flex-direction: column;
@@ -180,7 +167,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* ── Error Boundary ── */
 .error-boundary {
   display: flex;
   flex-direction: column;
@@ -223,14 +209,12 @@ body {
   background: rgba(201, 147, 58, 0.1);
 }
 
-/* ── Responsividade ── */
 @media (max-width: 900px) {
   .micro-grid {
     grid-template-columns: 1fr;
   }
 
   .micro-section--pedido {
-    /* No mobile o pedido fica abaixo do cardápio */
     order: -1;
   }
 }

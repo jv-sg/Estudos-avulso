@@ -1,19 +1,9 @@
-/**
- * App.js - Componente raiz do Container
- *
- * Orquestra o layout e carrega os micro frontends remotos.
- * Usa React.lazy + Suspense para carregamento assíncrono dos micros.
- */
 import React, { Suspense } from "react";
 import Header from "./components/Header";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-// Importa o micro Cardápio de forma lazy via Module Federation
-// O nome 'microCardapio' corresponde ao alias declarado no webpack.config.js
 const CardapioApp = React.lazy(() => import("microCardapio/CardapioApp"));
-
-// Importa o micro Pedido de forma lazy via Module Federation
 const PedidoApp = React.lazy(() => import("microPedido/PedidoApp"));
 
 const App = () => {

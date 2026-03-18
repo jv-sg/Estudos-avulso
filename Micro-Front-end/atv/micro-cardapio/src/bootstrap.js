@@ -1,7 +1,3 @@
-/**
- * bootstrap.js - Micro Cardápio
- * Monta o app standalone (para desenvolvimento/teste isolado).
- */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import CardapioApp from "./CardapioApp";

@@ -1,9 +1,3 @@
-/**
- * PedidoVazio.js - Estado vazio do pedido
- *
- * Exibido quando nenhum item foi adicionado ainda.
- * Orienta o usuário a interagir com o cardápio.
- */
 import React from "react";
 
 const PedidoVazio = () => {
