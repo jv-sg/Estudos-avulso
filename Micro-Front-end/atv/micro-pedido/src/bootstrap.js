@@ -1,7 +1,3 @@
-/**
- * bootstrap.js - Micro Pedido
- * Monta o app standalone (modo de desenvolvimento isolado).
- */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import PedidoApp from "./PedidoApp";

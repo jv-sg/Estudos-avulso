@@ -1,9 +1,3 @@
-/**
- * pratos.js - Base de dados local do cardápio
- *
- * Em um cenário real, esses dados viriam de uma API REST.
- * Aqui usamos dados estáticos para simular o cardápio do restaurante.
- */
 export const pratos = [
   // ── Entradas ──
   {
@@ -12,7 +6,7 @@ export const pratos = [
     descricao: "Pão tostado com tomate fresco, manjericão e azeite extra virgem.",
     preco: 24.9,
     categoria: "entrada",
-    emoji: "🍅",
+    url: "http://localhost:3001/assets/img/receitabruschettadetomateemanjericao.webp",
   },
   {
     id: 2,
@@ -20,7 +14,7 @@ export const pratos = [
     descricao: "Fatias finíssimas de filé mignon com alcaparras e parmesão.",
     preco: 38.9,
     categoria: "entrada",
-    emoji: "🥩",
+    url: "http://localhost:3001/assets/img/carpaccio_carne_zona_sul_destaque.webp",
   },
   {
     id: 3,
@@ -28,9 +22,8 @@ export const pratos = [
     descricao: "Tomate, mozzarella de búfala, manjericão e redução de balsâmico.",
     preco: 29.9,
     categoria: "entrada",
-    emoji: "🥗",
+    url: "http://localhost:3001/assets/img/Salada_Caprese_S-1.webp",
   },
-
   // ── Principais ──
   {
     id: 4,
@@ -38,7 +31,7 @@ export const pratos = [
     descricao: "Arroz arbóreo cremoso com mix de cogumelos e trufa negra.",
     preco: 68.9,
     categoria: "principal",
-    emoji: "🍄",
+    url: "http://localhost:3001/assets/img/Risoto-de-Funghi-Seco-1.webp",
   },
   {
     id: 5,
@@ -46,7 +39,7 @@ export const pratos = [
     descricao: "Filé mignon grelhado com molho madeira e batatas rústicas.",
     preco: 89.9,
     categoria: "principal",
-    emoji: "🥩",
+    url: "http://localhost:3001/assets/img/receita_de_fil_mignon_ao_molho_madeira-1.webp",
   },
   {
     id: 6,
@@ -54,7 +47,7 @@ export const pratos = [
     descricao: "Salmão grelhado com manteiga de ervas e legumes salteados.",
     preco: 79.9,
     categoria: "principal",
-    emoji: "🐟",
+    url: "http://localhost:3001/assets/img/Salmao_limao_siciliano-1.webp",
   },
   {
     id: 7,
@@ -62,9 +55,8 @@ export const pratos = [
     descricao: "Linguine com vôngoles frescos, alho, vinho branco e salsinha.",
     preco: 64.9,
     categoria: "principal",
-    emoji: "🍝",
+    url: "http://localhost:3001/assets/img/espaguete_ao_vongole.webp",
   },
-
   // ── Sobremesas ──
   {
     id: 8,
@@ -72,7 +64,7 @@ export const pratos = [
     descricao: "Clássico italiano com mascarpone, espresso e cacau em pó.",
     preco: 32.9,
     categoria: "sobremesa",
-    emoji: "☕",
+    url: "https://blog.coffeemais.com/wp-content/uploads/2021/09/tiramisu-topo.jpg",
   },
   {
     id: 9,
@@ -80,7 +72,7 @@ export const pratos = [
     descricao: "Creme de baunilha com casquinha de açúcar caramelizado.",
     preco: 28.9,
     categoria: "sobremesa",
-    emoji: "🍮",
+    url: "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/2af5146b9eb248e3779a2257c8a15405/Derivates/8320daaa84e57508997471c53529a3a830e9463a.jpg",
   },
   {
     id: 10,
@@ -88,9 +80,8 @@ export const pratos = [
     descricao: "Bolinho quente de chocolate com sorvete de baunilha.",
     preco: 34.9,
     categoria: "sobremesa",
-    emoji: "🍫",
+    url: "https://i0.wp.com/guiadoestrangeiro.com/wp-content/uploads/2022/06/receita-de-petit-gateau.jpg?fit=1280%2C853&ssl=1",
   },
-
   // ── Bebidas ──
   {
     id: 11,
@@ -98,7 +89,7 @@ export const pratos = [
     descricao: "Água mineral gaseificada importada, 500ml.",
     preco: 9.9,
     categoria: "bebida",
-    emoji: "💧",
+    url: "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/01/agua-com-gas.jpg?w=1200&h=900&crop=1",
   },
   {
     id: 12,
@@ -106,7 +97,7 @@ export const pratos = [
     descricao: "Suco natural de maracujá com toque de hortelã.",
     preco: 18.9,
     categoria: "bebida",
-    emoji: "🥤",
+    url: "https://marmitexdesucesso.com.br/wp-content/uploads/2025/05/Como-fazer-suco-de-maracuja-sem-liquidificador.jpg",
   },
   {
     id: 13,
@@ -114,6 +105,6 @@ export const pratos = [
     descricao: "Taça de vinho tinto seco, seleção do sommelier.",
     preco: 32.9,
     categoria: "bebida",
-    emoji: "🍷",
+    url: "https://supertarget.com.br/wp-content/uploads/sites/6/2025/04/1.jpg",
   },
 ];

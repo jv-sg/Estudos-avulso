@@ -1,9 +1,3 @@
-/**
- * Header.js - Cabeçalho global da aplicação Container
- *
- * Componente de apresentação que exibe a marca do restaurante.
- * Reutilizável e independente dos micros.
- */
 import React from "react";
 
 const Header = () => {

@@ -1,10 +1,3 @@
-/**
- * ErrorBoundary.js - Limite de erro para micros remotos
- *
- * Captura erros de renderização dos micro frontends remotos
- * (ex: micro fora do ar) e exibe um fallback amigável.
- * Usa a API de classe pois componentDidCatch ainda não tem hook equivalente.
- */
 import React from "react";
 
 class ErrorBoundary extends React.Component {
@@ -13,12 +6,10 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false, errorMessage: "" };
   }
 
-  // Atualiza estado quando um erro é capturado
   static getDerivedStateFromError(error) {
     return { hasError: true, errorMessage: error.message };
   }
 
-  // Log do erro para debugging
   componentDidCatch(error, errorInfo) {
     console.error("[ErrorBoundary] Erro no micro frontend:", error, errorInfo);
   }
@@ -42,7 +33,6 @@ class ErrorBoundary extends React.Component {
         </div>
       );
     }
-
     return this.props.children;
   }
 }

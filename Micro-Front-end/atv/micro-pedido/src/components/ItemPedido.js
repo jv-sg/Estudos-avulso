@@ -1,9 +1,3 @@
-/**
- * ItemPedido.js - Linha de item dentro do pedido
- *
- * Exibe o prato, permite incrementar/decrementar a quantidade
- * e remover o item completamente. Componente reutilizável.
- */
 import React from "react";
 
 const ItemPedido = ({ item, onRemover, onAlterarQuantidade }) => {

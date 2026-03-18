@@ -1,16 +1,7 @@
-/**
- * ResumoPedido.js - Resumo financeiro e botão de confirmação
- *
- * Calcula e exibe subtotal, taxa de serviço e total final.
- * Componente reutilizável e isolado da lógica de negócio.
- */
 import React from "react";
 
-// Taxa de serviço aplicada ao pedido (10%)
 const TAXA_SERVICO = 0.1;
-
 const ResumoPedido = ({ itens, onConfirmar }) => {
-  // Calcula subtotal somando (preço × quantidade) de cada item
   const subtotal = itens.reduce(
     (acc, { prato, quantidade }) => acc + prato.preco * quantidade,
     0
